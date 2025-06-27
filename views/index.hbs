@@ -1,0 +1,24 @@
+<h1> All Users and Task</h1>
+
+<a href="/user/new"> Add User</a>
+<a href="/tasks/new"> Assign task User</a>
+<a href="/users/export/excel"> Export Excel</a>
+
+<hr/>
+
+{{#each users}}
+<h3>{{name}} ({{email}}) {{contact}} </h3>
+
+
+{{#if tasks.length}}
+<ul>
+    {{#each tasks}}
+    <li> {{title}} - {{description}} </li>
+    {{/each}}
+</ul>
+{{else}}
+<p>No task Assigned </p>
+{{/if}}
+<hr/>
+
+{{/each}}
